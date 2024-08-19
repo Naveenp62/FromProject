@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVEN ODD</title>
+</head>
+<body>
+    <h1>This PAGE DISPLAY THE CONTENT OF FORM</h1>
+    <hr>
+    <form method="POST">{% csrf_token %}
+        <label for="n1">Number:</label>
+        <input name="num" id="n1" type="number" placeholder="Enter Number" required>
+        <br><br>
+        <button style="color: aqua;">Submit</button>
+    </form>
+    <hr>
+    <h3>Hi Guys:
+        <br>
+        {% if res %}
+            <h3>The Given Number is Even</h3>
+        {% else %}
+            <h3>The Given Number is Odd </h3>
+        {% endif %}
+    </h3>
+</body>
+</html>

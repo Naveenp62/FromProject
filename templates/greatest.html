@@ -1,0 +1,18 @@
+<html>
+    <title>Form</title>
+    <body>
+        <h1>This page is for form submission</h1>
+        <hr>
+
+        <form method="POST">{% csrf_token %}
+            <label for="n1">number1:</label>
+            <input name="num1" id="n1" type="number" placeholder="enternumber">
+            <br>
+            <label for="n2">number2:</label>
+            <input name="num2" id="n2" type="number" placeholder="enternumber">
+            <br><br><button>submit</button>
+{% if res  %}
+    <h3 style="color: aquamarine;">number1 is greatest</h3>
+{% else %}
+    <h3 style="color: brown;">number2 is greatest</h3>
+{% endif %}

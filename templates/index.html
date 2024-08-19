@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM PAGE</title>
+</head>
+<body>
+    <h1>This PAGE DISPLAY THE CONTENT OF FORM</h1>
+    <hr>
+    <form method="POST">{% csrf_token %}
+        <label for="n1">Name:</label>
+        <input name="sname" id="n1" type="text" placeholder="Enter Name" required>
+        <br>
+        <br>
+        <button style="color: aqua;">Submit</button>
+    </form>
+    <hr>
+    <h3>{{ result }}</h3>
+</body>
+</html>
